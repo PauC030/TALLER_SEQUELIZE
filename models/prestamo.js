@@ -14,7 +14,7 @@ const Prestamo = sequelize.define('Prestamo', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Libro',  // Asegúrate de que 'Libro' sea un modelo Sequelize
+            model: 'Libro',  
             key: 'id',
         },
     },
@@ -22,7 +22,7 @@ const Prestamo = sequelize.define('Prestamo', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Usuario',  // Asegúrate de que 'Usuario' sea un modelo Sequelize
+            model: 'Usuario',  
             key: 'id',
         },
     },

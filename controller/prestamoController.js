@@ -23,13 +23,13 @@ class PrestamoController {
     try {
       const prestamo = await PrestamoService.actualizarPrestamo(req.params.id, req.body);
       if (prestamo) {
-        res.json(prestamo); // Devuelve el objeto actualizado
+        res.json(prestamo); 
       } else {
-        res.status(404).json({ error: 'Prestamo no encontrado' }); // Usa un estado 404
+        res.json({ error: 'Prestamo no encontrado' }); 
       }
     } catch (e) {
-      console.error(e); // Registro del error para depuración
-      res.status(500).json({ error: 'Error al actualizar el prestamo' }); // Estado 500 para errores internos
+      console.error(e); 
+      res.json({ error: 'Error al actualizar el prestamo' }); 
     }
   }
   
